@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>form</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <h1>Form</h1>
+
+  <form action="/submit" method="post">
+
+    <div id="content">
+      <div class="div1">
+        <label for="name">Name:</label>
+      </div>
+      <div class="div2">
+
+        <input type="text" id="name" name="name" pattern="[A-Z][a-z]*" placeholder="Samar" required>
+        <img src="download.png" height="20px" width="20px" onclick="myFunction()" />
+      </div>
+      <div class="div3">
+        <label for="email" id="label1">Email: </label>
+      </div>
+      <div class="div4">
+        <input type="email" name="email" id="email" pattern=".+@gmail\.com|.+@envato\.com" placeholder="Sam@gmail.com"
+          required>
+        <img src="download.png" height="20px" width="20px" onclick="myFunction2()" />
+      </div>
+      <div class="div5">
+        <label for="Gender">Gender :</label>
+      </div>
+      <div class="div6">
+        <select name="gender" id="gender">
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="other">other</option>
+
+        </select>
+      </div>
+      <div class="div7">
+        <label for="department" id="label2">Department</label>
+      </div>
+      <div class="div8">
+        <select name="department" id="department">
+          <option value="Devops">Devops</option>
+          <option value="Frontend">Frontend</option>
+          <option value="Backend">Backend</option>
+        </select>
+      </div>
+      <div class="div9">
+        <label for="comments">
+          Comments:
+        </label>
+      </div>
+      <div class="div10">
+        <input id="comments" name="comments" class="text" type="text" required />
+      </div>
+
+      <div class="div11">
+        <input type="submit" value="Submit">
+      </div>
+    </div>
+  </form>
+  <script>
+    function myFunction() {
+      alert("Name should start with capital and Shouldnot contain numbers");
+    }
+    function myFunction2() {
+      alert("Email should end with @gmail.com");
+    }
+  </script>
+</body>
+
+</html>
